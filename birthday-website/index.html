@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Happy 21st Birthday, Joshua</title>
+<meta name="theme-color" content="#0e0d0c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐞</text></svg>">
+<style>
+  :root { --bg:#0e0d0c; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body {
+    margin:0; padding:0; height:100%; width:100%;
+    background:var(--bg); overflow:hidden;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    overscroll-behavior:none; touch-action:manipulation;
+  }
+
+  /* ---- the stage: a fixed 1366x768 canvas, scaled to fit the window ---- */
+  #fit { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; }
+  #stage {
+    position:relative; width:1366px; height:768px; flex:none;
+    transform-origin:center center; background:#000; overflow:hidden;
+    opacity:0; transition:opacity .45s ease;
+  }
+  #stage.ready { opacity:1; }
+
+  /* ---- slides ---- */
+  .slide {
+    position:absolute; left:0; top:0; width:1366px; height:768px;
+    opacity:0; transition:opacity .2s linear; pointer-events:none;
+    user-select:none; -webkit-user-drag:none; display:block;
+  }
+  .slide.on { opacity:1; }
+
+  /* ---- click zones ---- */
+  .zone { position:absolute; cursor:pointer; background:transparent; }
+  #back  { left:0; top:0; width:455px; height:768px; z-index:5; cursor:w-resize; }
+  .fwd   { z-index:10; }
+  .fwd.any { z-index:3; }
+
+  /* ---- slide 86: the photo strip ---- */
+  #strip {
+    position:absolute; z-index:8; overflow-y:auto; overflow-x:hidden;
+    background:#000; cursor:grab;
+    scrollbar-width:none; -ms-overflow-style:none;
+    -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
+  }
+  #strip::-webkit-scrollbar { display:none; }
+  #strip.dragging { cursor:grabbing; }
+  #strip img { display:block; width:100%; height:auto; margin-bottom:6px; user-select:none; -webkit-user-drag:none; }
+  #strip img:last-child { margin-bottom:0; }
+
+  /* ---- slide 88: the candles ---- */
+  #candles { position:absolute; inset:0; z-index:8; pointer-events:none; }
+  #caketap { left:498px; top:150px; width:396px; height:618px; z-index:10; display:none; }
+  #caketap.on { display:block; }
+  .flame {
+    position:absolute; transform-origin:50% 88%;
+    will-change:transform,opacity;
+    animation:flicker 1.6s ease-in-out infinite alternate;
+  }
+  .flame.f2 { animation-duration:1.15s; animation-delay:-.4s; }
+  .flame.f3 { animation-duration:1.9s;  animation-delay:-.9s; }
+  .flame.f4 { animation-duration:1.35s; animation-delay:-.2s; }
+  @keyframes flicker {
+    0%   { transform:rotate(-2.2deg) scale(1,.97)    translateY(.5px); opacity:.94; }
+    25%  { transform:rotate(1.4deg)  scale(1.03,1.04) translateY(-1px); opacity:1; }
+    50%  { transform:rotate(-1deg)   scale(.98,1.01)  translateY(0);    opacity:.9; }
+    75%  { transform:rotate(2.4deg)  scale(1.02,1.06) translateY(-1.5px); opacity:1; }
+    100% { transform:rotate(-1.6deg) scale(1,.99)     translateY(0);    opacity:.95; }
+  }
+  .flame.out { animation:puff .75s cubic-bezier(.3,.1,.5,1) forwards; }
+  @keyframes puff {
+    0%   { transform:scale(1) translateY(0);           opacity:1;  filter:blur(0); }
+    28%  { transform:scale(1.35,.55) translateY(4px) rotate(9deg); opacity:.85; }
+    100% { transform:scale(.25,.2) translateY(-26px) rotate(-14deg); opacity:0; filter:blur(3px); }
+  }
+
+  /* ---- things outside the artwork ---- */
+  #note {
+    position:fixed; left:50%; bottom:12px; transform:translateX(-50%);
+    color:rgba(255,255,255,.82); font-size:13px; letter-spacing:.2px;
+    background:rgba(20,18,17,.62); border-radius:999px; padding:7px 15px;
+    backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+    pointer-events:none; opacity:0; transition:opacity .4s ease; max-width:88vw;
+  }
+  #note.show { opacity:1; }
+  #rotate {
+    position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+    background:var(--bg); color:rgba(255,255,255,.7); font-size:15px; text-align:center;
+    padding:0 32px; z-index:99; line-height:1.6;
+  }
+  @media (orientation:portrait) and (max-width:820px) { #rotate { display:flex; } }
+  #loader {
+    position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+    color:rgba(255,255,255,.4); font-size:14px; background:var(--bg); z-index:50;
+    transition:opacity .4s ease;
+  }
+  #loader.gone { opacity:0; pointer-events:none; }
+</style>
+</head>
+<body>
+
+<div id="fit">
+  <div id="stage">
+    <div id="back" class="zone" title="back"></div>
+  </div>
+</div>
+
+<div id="note"></div>
+<div id="loader">loading…</div>
+<div id="rotate">🐞<br>please turn your phone sideways</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var N = 88;
+  var stage  = document.getElementById('stage');
+  var back   = document.getElementById('back');
+  var note   = document.getElementById('note');
+  var loader = document.getElementById('loader');
+
+  /* ---------------------------------------------------------------- scaling */
+  function fit() {
+    var s = Math.min(window.innerWidth / 1366, window.innerHeight / 768);
+    stage.style.transform = 'scale(' + s + ')';
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', function () { setTimeout(fit, 120); });
+  fit();
+
+  /* ---------------------------------------------------------------- slides */
+  var imgs = {};       // n -> <img>
+  var loaded = {};     // n -> true
+
+  function slideEl(n) {
+    if (imgs[n]) return imgs[n];
+    var im = document.createElement('img');
+    im.className = 'slide';
+    im.decoding = 'async';
+    im.draggable = false;
+    im.alt = '';
+    im.src = 'slides/' + n + '.jpg';
+    im.addEventListener('load', function () { loaded[n] = true; });
+    stage.insertBefore(im, back);
+    imgs[n] = im;
+    return im;
+  }
+
+  function preload(n) {
+    if (n < 1 || n > N || loaded[n]) return;
+    slideEl(n);
+  }
+
+  /* ------------------------------------------------------------- hot zones */
+  var zoneBox = document.createElement('div');
+  stage.appendChild(zoneBox);
+
+  function buildZones(n) {
+    zoneBox.innerHTML = '';
+    var list = SPOTS[n] || [];
+    for (var i = 0; i < list.length; i++) {
+      var sp = list[i];
+      var d = document.createElement('div');
+      d.className = 'zone fwd' + (sp.k === 'any' ? ' any' : '');
+      d.style.left   = sp.r[0] + 'px';
+      d.style.top    = sp.r[1] + 'px';
+      d.style.width  = sp.r[2] + 'px';
+      d.style.height = sp.r[3] + 'px';
+      d.addEventListener('click', function (e) { e.stopPropagation(); go(cur + 1); });
+      zoneBox.appendChild(d);
+    }
+  }
+
+  /* -------------------------------------------------------------- the film */
+  var strip = null;
+  function buildStrip() {
+    if (strip) return strip;
+    strip = document.createElement('div');
+    strip.id = 'strip';
+    strip.style.left   = STRIP.x + 'px';
+    strip.style.top    = STRIP.y + 'px';
+    strip.style.width  = STRIP.w + 'px';
+    strip.style.height = STRIP.h + 'px';
+    PHOTOS.forEach(function (p) {
+      var im = document.createElement('img');
+      im.src = p.src; im.alt = ''; im.draggable = false; im.decoding = 'async';
+      im.style.aspectRatio = String(p.ar);
+      strip.appendChild(im);
+    });
+
+    // drag to scroll (mouse) — there is no visible scrollbar
+    var down = false, y0 = 0, top0 = 0, moved = 0;
+    strip.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'touch') return;      // native touch scrolling
+      down = true; moved = 0; y0 = e.clientY; top0 = strip.scrollTop;
+      strip.classList.add('dragging');
+      strip.setPointerCapture(e.pointerId);
+    });
+    strip.addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dy = (e.clientY - y0) / curScale();
+      moved = Math.max(moved, Math.abs(dy));
+      strip.scrollTop = top0 - dy;
+    });
+    function up(e) {
+      if (!down) return;
+      down = false; strip.classList.remove('dragging');
+      try { strip.releasePointerCapture(e.pointerId); } catch (err) {}
+    }
+    strip.addEventListener('pointerup', up);
+    strip.addEventListener('pointercancel', up);
+    strip.addEventListener('click', function (e) { e.stopPropagation(); });
+    return strip;
+  }
+  function curScale() {
+    return Math.min(window.innerWidth / 1366, window.innerHeight / 768) || 1;
+  }
+  function nudgeStrip() {
+    if (!strip) return;
+    strip.scrollTop = 0;
+    var t0 = null, dur = 1100;
+    function step(ts) {
+      if (t0 === null) t0 = ts;
+      var k = (ts - t0) / dur;
+      if (k >= 1) { strip.scrollTop = 0; return; }
+      strip.scrollTop = Math.sin(k * Math.PI) * 46;
+      requestAnimationFrame(step);
+    }
+    setTimeout(function () { requestAnimationFrame(step); }, 520);
+  }
+
+  /* ------------------------------------------------------------ the candles */
+  var candles = null, caketap = null, blown = false, audioStop = null;
+  function buildCandles() {
+    if (candles) return candles;
+    candles = document.createElement('div');
+    candles.id = 'candles';
+    caketap = document.createElement('div');
+    caketap.id = 'caketap';
+    caketap.className = 'zone';
+    caketap.addEventListener('click', function (e) { e.stopPropagation(); blowOut(); });
+    FLAMES.forEach(function (f, i) {
+      var im = document.createElement('img');
+      im.className = 'flame f' + (i + 1);
+      im.src = 'assets/flame' + (i + 1) + '.png';
+      im.alt = ''; im.draggable = false;
+      im.style.left = f.x + 'px'; im.style.top = f.y + 'px';
+      im.style.width = f.w + 'px'; im.style.height = f.h + 'px';
+      candles.appendChild(im);
+    });
+    return candles;
+  }
+
+  function blowOut() {
+    if (blown || !candles) return;
+    blown = true;
+    var fl = candles.querySelectorAll('.flame');
+    for (var i = 0; i < fl.length; i++) {
+      (function (el, k) {
+        setTimeout(function () { el.classList.add('out'); }, k * 130);
+      })(fl[i], i);
+    }
+    note.className = '';
+    if (caketap) caketap.className = 'zone';
+    if (audioStop) { audioStop(); audioStop = null; }
+  }
+
+  function listenForBlowing() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { allowTap(); return; }
+    navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation:false, noiseSuppression:false, autoGainControl:false }
+    }).then(function (stream) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      var ctx = new AC();
+      if (ctx.state === 'suspended') ctx.resume();
+      var src = ctx.createMediaStreamSource(stream);
+      var an = ctx.createAnalyser();
+      an.fftSize = 1024;
+      an.smoothingTimeConstant = 0.55;
+      src.connect(an);
+
+      var freq = new Float32Array(an.frequencyBinCount);
+      var time = new Float32Array(an.fftSize);
+      var held = 0, raf = 0, alive = true, rmsAvg = 0;
+      var binHz = ctx.sampleRate / an.fftSize;
+      var loEnd  = Math.max(2, Math.floor(600  / binHz));   //    0 –  600 Hz
+      var midEnd = Math.floor(3800 / binHz);                //  600 – 3800 Hz
+      var flatEnd = Math.floor(1200 / binHz);               // band for flatness
+
+      function tick() {
+        if (!alive) return;
+        an.getFloatTimeDomainData(time);
+        var sum = 0, i;
+        for (i = 0; i < time.length; i++) sum += time[i] * time[i];
+        var rms = Math.sqrt(sum / time.length);
+        // breath noise is spiky — smooth it so brief dips don't break the streak
+        rmsAvg = rmsAvg * 0.7 + rms * 0.3;
+
+        an.getFloatFrequencyData(freq);                     // dB values
+        var lo = 0, mid = 0, lnSum = 0, linSum = 0, j, m;
+        for (j = 2; j < loEnd; j++)      lo  += freq[j];
+        for (j = loEnd; j < midEnd; j++) mid += freq[j];
+        lo  /= Math.max(1, loEnd - 2);
+        mid /= Math.max(1, midEnd - loEnd);
+        for (j = 2; j < flatEnd; j++) {
+          m = Math.pow(10, freq[j] / 20) + 1e-9;
+          lnSum += Math.log(m); linSum += m;
+        }
+        var cnt = Math.max(1, flatEnd - 2);
+        // spectral flatness: ~1 for the broadband hiss of breath, low for voice/tones
+        var flat = Math.exp(lnSum / cnt) / (linSum / cnt);
+
+        // Blowing on a mic is loud and dominated by low-frequency breath rumble.
+        // Bias towards sensitivity: a stray trigger is a smaller let-down than
+        // blowing at the screen and having nothing happen.
+        var loud   = rmsAvg > 0.030;        // well above room tone, easy to reach
+        var rumbly = lo > mid + 4;          // dB: the lows dominate
+        var hissy  = flat > 0.22;           // broadband, not a musical tone
+
+        if (loud && (rumbly || hissy)) {
+          held += 16;
+          if (held > 180) { blowOut(); return; }
+        } else {
+          held = Math.max(0, held - 10);
+        }
+        raf = requestAnimationFrame(tick);
+      }
+      raf = requestAnimationFrame(tick);
+
+      audioStop = function () {
+        alive = false; cancelAnimationFrame(raf);
+        stream.getTracks().forEach(function (t) { t.stop(); });
+        ctx.close();
+      };
+      allowTap(true);
+    }).catch(function () {
+      allowTap();
+      say('microphone is off — tap the candles to blow them out');
+    });
+  }
+
+  function allowTap(quiet) {
+    if (caketap) caketap.classList.add('on');
+    if (!quiet) return;
+    setTimeout(function () {
+      if (!blown) say('…or just tap the candles');
+    }, 14000);
+  }
+
+  function say(msg) {
+    note.textContent = msg;
+    note.className = 'show';
+  }
+
+  /* ------------------------------------------------------------ navigation */
+  var cur = 0;
+
+  function go(n) {
+    if (n < 1 || n > N || n === cur) return;
+    var prev = cur;
+    cur = n;
+
+    slideEl(n).classList.add('on');
+    if (prev && imgs[prev]) imgs[prev].classList.remove('on');
+
+    buildZones(n);
+
+    // the film strip lives on slide 86 only
+    if (n === 86) { stage.insertBefore(buildStrip(), zoneBox); nudgeStrip(); }
+    else if (strip && strip.parentNode) strip.parentNode.removeChild(strip);
+
+    // the candles live on slide 88 only
+    if (n === 88) {
+      stage.insertBefore(buildCandles(), zoneBox);
+      stage.appendChild(caketap);
+      if (!blown) listenForBlowing(); else caketap.className = 'zone';
+    } else {
+      if (candles && candles.parentNode) candles.parentNode.removeChild(candles);
+      if (caketap && caketap.parentNode) caketap.parentNode.removeChild(caketap);
+      if (audioStop) { audioStop(); audioStop = null; }
+      note.className = '';
+    }
+
+    // keep a few neighbours warm
+    preload(n + 1); preload(n + 2); preload(n - 1);
+
+    try { history.replaceState(null, '', '#' + n); } catch (e) {}
+  }
+
+  back.addEventListener('click', function (e) { e.stopPropagation(); go(cur - 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') { go(cur + 1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft'  || e.key === 'Backspace')              { go(cur - 1); e.preventDefault(); }
+  });
+
+  /* --------------------------------------------------------------- startup */
+  var first = slideEl(1);
+  function start() {
+    loader.className = 'gone';
+    stage.className = 'ready';
+    go(1);
+    // quietly warm the rest of the deck, a few at a time
+    var q = 2, inflight = 0;
+    (function pump() {
+      while (q <= N && inflight < 3) {
+        (function (n) {
+          inflight++;
+          var im = new Image();
+          im.onload = im.onerror = function () { inflight--; pump(); };
+          im.src = 'slides/' + n + '.jpg';
+        })(q++);
+      }
+    })();
+  }
+  if (first.complete) start();
+  else { first.addEventListener('load', start); first.addEventListener('error', start); }
+
+  // deep link, e.g. index.html#42 — handy while checking the site
+  function fromHash() {
+    var h = parseInt((location.hash || '').slice(1), 10);
+    if (h >= 1 && h <= N) go(h);
+  }
+  window.addEventListener('hashchange', fromHash);
+  first.addEventListener('load', fromHash);
+  if (first.complete) setTimeout(fromHash, 0);
+})();
+</script>
+</body>
+</html>
