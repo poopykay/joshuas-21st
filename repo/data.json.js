@@ -1,0 +1,559 @@
+window.DATA = {
+ "friends": [
+  {
+   "name": "pokay",
+   "slug": "pokay",
+   "message": "Hello Ling ling happy birthday! Hope u have a great one! This is probably the last birthday we’ll be celebrating with you for a while and i js wna say im so grateful for u, being there for me etc. Hope all goes well in UK and come back and visit us!",
+   "template": "journal",
+   "photo_web": [],
+   "name_asset": "assets/names/pokay.png",
+   "n_photos": 0
+  },
+  {
+   "name": "jeremy",
+   "slug": "jeremy",
+   "message": "Blessed 21st pokermaster, vibemonster and fellow brother. Thank you for always being so selfless and caring for the people around you, always going above and beyond for your mates. So glad to have met you in JC and excited to make more memories w the boys and hopefully my kid will wreck urs in tennis someday. Continue loving God and being a blessing to others, I pray that you will grow even stronger in your faith/walk with him, that you will learn to lean on his love as your bestfriend and King. Even as you step into a new season in your life, don’t forget that I’m always a call/text away, and I might deadass visit you sometime next year. Love you cuz, stay fast. \n\n~~ jeremy ✌️",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/jeremy/1.jpg",
+    "assets/photos/jeremy/2.jpg"
+   ],
+   "name_asset": "assets/names/jeremy.png",
+   "n_photos": 2
+  },
+  {
+   "name": "claire",
+   "slug": "claire",
+   "message": "Happy birthday joshua ling ure finally 21! Thanks for being a homie since day 1 when u literally broke the church chair because u kept moving ard. U never fail to keep us entertained w ur weird stories (even though u take a bazillion years to finish one story)... anyw u have yet to repay me for the many rides and let me sit in ur car so btr show me the driving skills bfore u fly to the UK. Have the best time in the UK and happy 21st!! \n- claire",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/claire/1.jpg",
+    "assets/photos/claire/2.jpg",
+    "assets/photos/claire/3.jpg"
+   ],
+   "name_asset": "assets/names/claire.png",
+   "n_photos": 3
+  },
+  {
+   "name": "bryan",
+   "slug": "bryan",
+   "message": "Happy bday man,, sry i cant be there for ur party but its cuz u buey brother me also right 🤣 jk love u lots man stay safe in london and ill see u soon ❤️",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/bryan/1.jpg",
+    "assets/photos/bryan/2.jpg"
+   ],
+   "name_asset": "assets/names/bryan.png",
+   "n_photos": 2
+  },
+  {
+   "name": "nina",
+   "slug": "nina",
+   "message": "hi ling! happiest 21st birthday 🥳 i’m grateful to have met you in jc and remained friends since then 🙏🏼 thank you for always looking out and being there for me, it means a lot 🥲 i hope you have the best birthday ever and may all your wishes come true!",
+   "template": "jeans",
+   "photo_web": [
+    "assets/photos/nina/1.jpg"
+   ],
+   "name_asset": "assets/names/nina.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Ayman",
+   "slug": "ayman",
+   "message": "love you king, you’ve always been a day 1. Thank God you’re alive",
+   "template": "camera",
+   "photo_web": [
+    "assets/photos/ayman/1.jpg"
+   ],
+   "name_asset": "assets/names/ayman.png",
+   "n_photos": 1
+  },
+  {
+   "name": "naqif",
+   "slug": "naqif",
+   "message": "happy 21st LINNGGGGGGGGGGG!! we’ve known of each other for hella long, technically from your cousin LOL, but also from SJI, to being in the SA, and now somehow we’re here and the funniest part is that even though we’ve technically known each other for damn long, we only actually got closer recently and im really greatful for that!! \n\nhonestly it’s kinda crazy that you’re 21 already cause your indecisiveness still makes me feel like you're a kid.. you’ve got so much ahead of you bro, and i genuinely hope you get to where you wanna be in life. only thing i gotta say is PLEASE be more decisive stop being the final boss of indecisiveness. sometimes just pick one and send it, we believe in you.. eh maybe.. idk.. LOL\n\nlooking back, i’m really glad we got closer after jc. you’ve genuinely become someone i really appreciate having as a friend, and i think it’s rare to have friendships that just naturally grow stronger and where we can just be ourselves and unguarded at times. i'm grateful that we crossed paths and ended up becoming this close.\n\nhappy 21st once again bro, have a good one and all the best for your studies overseas. don’t forget us when you’re living your best life overseas and wishing you all the best for uni, hope everything goes well for you and most importantly, don’t forget to link me up with an intern at uob thanks pookie HAHAHAHHAHH\n\nps: i still hv that random ass photo of us at the basketball court which was taken way before we even got close and i somehow already had it up in my room back then\n\nsheikhs and giggles,\narab",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/naqif/1.jpg",
+    "assets/photos/naqif/2.jpg"
+   ],
+   "name_asset": "assets/names/naqif.png",
+   "n_photos": 2
+  },
+  {
+   "name": "renee",
+   "slug": "renee",
+   "message": "joshua!\n\nhappiest 21st, i too am blessed to call u one of my closest friends! although we've annoyed eo countless times,thats what brothers r for! Proud of u for having the courage to go overseas and seek greater heights. Hope everything will be okay, and u will find ur people!!! Ik ur sad i cmi ur farewell (u also cmi mine...) but ig it was fated that on the last day of work we wld commute tgt coincidentally and that gave me flashbacks to all the insane carpools we had that honestly im damn grateful for. a real day 1 no matter everything and im super grateful to u!!! always got ur back even tho u PMO! Stay safe in UK and storms dont last foreverrrr (maybe in the seasonal depression of UK it might JK) W to long distance we got dis u dog, \n\nRenee",
+   "template": "jeans",
+   "photo_web": [
+    "assets/photos/renee/1.jpg"
+   ],
+   "name_asset": "assets/names/renee.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Yong Pang",
+   "slug": "yong-pang",
+   "message": "HAPPY BIRTHDAY LINGGG! You are officially 21 so stop sulking and looking depressed all the time would ya 🤣 Hopefully this will be your best birthday yet and enjoy yourself to the fullest. We will see each other again soon so when the time comes let’s hang out again and have dinner :)",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/yong-pang/1.jpg",
+    "assets/photos/yong-pang/2.jpg",
+    "assets/photos/yong-pang/3.jpg"
+   ],
+   "name_asset": "assets/names/yong-pang.png",
+   "n_photos": 3
+  },
+  {
+   "name": "seow",
+   "slug": "seow",
+   "message": "Hey Ling,\n\nMet you at the start of what has become your very successful gambling career. I’d’ve never expected to get close to you but here we are. After a little less than a year you are among what I’m proud to call my some of my closest friends. You’re one of the chillest and kindest people I know. I’m so proud of you for getting into UCL, and I’m confident you’ll be happy there, so don’t sweat things too much! Everything will work out the way it’s supposed to. It’ll sting when you leave but I know when u get back, we’ll be playing poker like you never left. Happy Birthday man!!\n\nPut me on,\nseow",
+   "template": "camera",
+   "photo_web": [
+    "assets/photos/seow/1.jpg"
+   ],
+   "name_asset": "assets/names/seow.png",
+   "n_photos": 1
+  },
+  {
+   "name": "rae yap",
+   "slug": "rae-yap",
+   "message": "hey ling!!! happy 21st birthday!!! i honestly don’t know how or why we are friends and still friends today….kidding but genuinely glad to have this friendship with you ◡̈ can’t believe I’ve witnessed you through all your stories and that you got to witness my life through mine. you are a kind and sincere friend and anyone who has the privilege of knowing you is blessed! even as you take on new things and places in the future, know that you’ll always have us at home to cheer you on and hear you out. more importantly (for you), we won’t forget you or switch up on you… will try. to many years of lols ahead!!! - rae yap",
+   "template": "box",
+   "photo_web": [
+    "assets/photos/rae-yap/1.jpg",
+    "assets/photos/rae-yap/2.jpg",
+    "assets/photos/rae-yap/3.jpg",
+    "assets/photos/rae-yap/4.jpg"
+   ],
+   "name_asset": "assets/names/rae-yap.png",
+   "n_photos": 4
+  },
+  {
+   "name": "Anthony Low",
+   "slug": "anthony-low",
+   "message": "Happy 21 man! It's been one Hella of ride from p3 all the way till now! I've seen you at your highs and seen you at your lows. I have seen the growth. Thanks for bringing all of us your humour and energy to the friend groups you have. We probably have the most same friends grp like 4or smth.Thanks for always backing me and supporting but also share a voice of neutrality. And also being open and honest as well with what you think. As you go nto yr next stage in University rmbr don't stress to hard and if U need somebody to msg we are always gonna be there for you. Trust God and rely on him! Your presence will definitely be missed. Have a good one man.God bless-Alow",
+   "template": "jeans",
+   "photo_web": [
+    "assets/photos/anthony-low/1.jpg"
+   ],
+   "name_asset": "assets/names/anthony-low.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Kaelyn",
+   "slug": "kaelyn",
+   "message": "Happiest Birthday and great farewell Ling. I am so proud of the person you have grown into and I know that you will do so well in the UK. I know you have your worries but trust that God is always with you and is taking care of you. Will miss you lots!!! Grateful to have such an amazing friend like you. All the very best, will always be supporting you.",
+   "template": "camera",
+   "photo_web": [
+    "assets/photos/kaelyn/1.jpg"
+   ],
+   "name_asset": "assets/names/kaelyn.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Kyan",
+   "slug": "kyan",
+   "message": "Happy 21st ling, youre finally an adult man… Don’t do anything stupid, see you in UK man😛",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/kyan/1.jpg",
+    "assets/photos/kyan/2.jpg"
+   ],
+   "name_asset": "assets/names/kyan.png",
+   "n_photos": 2
+  },
+  {
+   "name": "thu ta",
+   "slug": "thu-ta",
+   "message": "Hi Ling we haven't been friends for a long time, if I'm not wrong we only met at around the start of 2025, and didn't even get that close until the end. I think the day that really made the difference for us was when howie brought us to that italian restaurant and we just talked about nothing but basketball and the celtics for three hours. My first impression of you was that you had alot of aura because of how calm and relaxed your demeanour was. Luckily that's changed, but it just got replaced by thinking you're tuff at poker...\n\nIt's really cringe to talk about poker in a cheesy message like this but since it's the whole reason we met and even became friends, it's crazy how good you are at it and I think i've paid for a flight or two with how much I've lost to you. But it's worth it since you're one of the most genuine and kindest guys I've ever met. I'll never forget the number of times I've jokingly asked you to spare me after losing and you'd always be down. Sorry for taking the money sometimes. And also for not being down to flip. And also for being happy the 0.1 percent of the time you lose. Oops. In writing this I've also realised that we have almost no photos together, and are limited to group ones. But not to worry I've included the one time I hit quads on your fullhouse. Let's make sure to take more photos whenever you're back in Singapore. \n\nPoker aside, (which I'm glad we grew out of) I really love the way you talk about your sisters and how much you care about them. I think it just shows how great of a guy you are and how well you treat your family is something I really admire about you. That day when I heard about the photoshoot you booked for your mom's birthday, I remember thinking to myself: Wow this guy is something else. I unironically became inspired to treat my family the way you do. You've made me a better person in that sense, and I'm really grateful to you for that. \n\nIt's crazy how much we've gotten to know each other in less than two years, and I can't wait for all the other experiences we'll have. Whenever you're back we definitely have to hoop again, but we definitely do NOT have to gamble again. \n\nWishing you luck in becoming a London finance bro, and don't forget about your day ones when you make it (although I'm more of a day two I guess). Happy Birthday man, love you and want nothing but the best for you.",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/thu-ta/1.jpg",
+    "assets/photos/thu-ta/2.jpg"
+   ],
+   "name_asset": "assets/names/thu-ta.png",
+   "n_photos": 2
+  },
+  {
+   "name": "viv",
+   "slug": "viv",
+   "message": "hi ling, thank you for being a solid ass friend even despite how much you piss me off…but in all seriousness, im really excited for you to go to ucl and do great things, hope u make lotsa new friends and memories there and lockin to become a finbro. Gonna miss having a neighbour but remember that we are all always js a text away and come back to visit often!! Thank you for everything you have done for us and for always being a good friend. Can’t wait to hear the ucl stories soon, and all the best i know youre gonna do great!",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/viv/1.jpg",
+    "assets/photos/viv/2.jpg"
+   ],
+   "name_asset": "assets/names/viv.png",
+   "n_photos": 2
+  },
+  {
+   "name": "chrystal",
+   "slug": "chrystal",
+   "message": "hi lingger,\nhappy 21st bday! since our first meeting during halloween in 2025, you’ve been such a goof in the best way possible, never failing to make me and the rest of harry potter laugh without even having the intention to. \n\nthough it feels sad that you’re going away for a long time, i hope you always remember that you brought a lot to the friend group and will always be a big part of us! i refuse to say goodbye because we will definitely hang out again in the future when you come back to sg!! \n\nall the best for your studies in the US, i truly hope your time there will be enjoyable with lots and lots of friends and memories!! jiayou and don’t forget us!!!\n\nchrystal, 2026",
+   "template": "corkboard",
+   "photo_web": [
+    "assets/photos/chrystal/1.jpg",
+    "assets/photos/chrystal/2.jpg",
+    "assets/photos/chrystal/3.jpg",
+    "assets/photos/chrystal/4.jpg"
+   ],
+   "name_asset": "assets/names/chrystal.png",
+   "n_photos": 4
+  },
+  {
+   "name": "arunesh",
+   "slug": "arunesh",
+   "message": "Hi ling. Happy birthday and hope you have the best time in the uk. In the short time i’ve known you i’ve come to consider you one of my closest friends and Im so grateful to have met you. I genuinely have the best time whenever I hang with you and i’m really glad i got closer to all of y’all over the past year. Just from this time alone i just know that you’re going to kill it in whatever future endeavour you pursue, whether it be getting used to living in a new country or acads wise etc etc. Gna miss u man and pls come back soon. I expect you to be jacked by the time u come back if not i’m gna keep touching ur supple nupples. I really really miss ur supple boobs. Love u broseph. ❤️🍒",
+   "template": "magnet",
+   "photo_web": [
+    "assets/photos/arunesh/1.jpg",
+    "assets/photos/arunesh/2.jpg",
+    "assets/photos/arunesh/3.jpg",
+    "assets/photos/arunesh/4.jpg",
+    "assets/photos/arunesh/5.jpg"
+   ],
+   "name_asset": "assets/names/arunesh.png",
+   "n_photos": 5
+  },
+  {
+   "name": "Julien Tremolieres",
+   "slug": "julien-tremolieres",
+   "message": "Happy 21st birthday Ling!! 🥳 I’m so grateful to have known you since primary school, and thank you for always being such a constant in my life throughout all these years.\n\nAll the best for your new chapter in the UK too! I know you’re going to absolutely cook there. Keep hitting the gym, and hopefully you’ll end up as captain of the UCL tennis team too hahaha.\n\nReally going to miss having you around, but I’m excited to see what’s ahead for you. Love ya mate ❤️",
+   "template": "jeans",
+   "photo_web": [
+    "assets/photos/julien-tremolieres/1.jpg"
+   ],
+   "name_asset": "assets/names/julien-tremolieres.png",
+   "n_photos": 1
+  },
+  {
+   "name": "daniela",
+   "slug": "daniela",
+   "message": "happiest birthday joshua!!! wow congrats on 21🥂🍾 🥳 hope you’ve been doing well and ready to move to the uk :) so proud to see all that you’ve accomplished and seeing you move on to bigger things! im excited to hear about all ur updates and i hope i get to visit or mayb u can visit the us too haha!!! anyways i just wna say that im so grateful for our friend grp and our friendship, that i got to know you better even tho we went to kindergarten tg lmao 🤣 wishing you the most blessed and special birthday ever, you deserve the best and more! hope to see you soon and wishing for a better season for the celtics 🤞",
+   "template": "camera",
+   "photo_web": [
+    "assets/photos/daniela/1.jpg"
+   ],
+   "name_asset": "assets/names/daniela.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Mark",
+   "slug": "mark",
+   "message": "Happiest Birthday Ling!! I really appreciate how you've always been there for each one of us in the GC and always there to boost the mood for everyone all these years. I wish you the very best as you study in London and I know you'll make the boys proud HAPPY BDAY",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/mark/1.jpg",
+    "assets/photos/mark/2.jpg",
+    "assets/photos/mark/3.jpg"
+   ],
+   "name_asset": "assets/names/mark.png",
+   "n_photos": 3
+  },
+  {
+   "name": "Josh Phong",
+   "slug": "josh-phong",
+   "message": "Hi Ling! My fellow Josh, Happy Birthday! Can’t believe we’re all 21 this is huge feels like our lives are just starting again after NS. Thank you for being such an amazing friend to me, I know we haven’t know each other for years but you’ve already done so much for me and been there for me through so much stuff and I am so grateful for you and I hope that I am as good as a friend to you as you are to me. I love you bro and I wish you all the best in the UK and I can’t wait to see you again and travel together.",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/josh-phong/1.jpg",
+    "assets/photos/josh-phong/2.jpg"
+   ],
+   "name_asset": "assets/names/josh-phong.png",
+   "n_photos": 2
+  },
+  {
+   "name": "Reiner",
+   "slug": "reiner",
+   "message": "Happy birthday Ling!! Can’t believe you’re about to fly off to the UK so soon. Things will definitely be very different there but i’m sure everything will turn out okay. \n\nContinue to be the group planner ah whenever you’re back in SG, hopefully all the boys will be free to hang out, for more hoops and drinking sessions. 💪 \n\nAnyways hope you have a great 21st and enjoy the 3 years you’ll be spending in the UK… we’ll be missing you bro.",
+   "template": "jeans",
+   "photo_web": [
+    "assets/photos/reiner/1.jpg"
+   ],
+   "name_asset": "assets/names/reiner.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Raquel",
+   "slug": "raquel",
+   "message": "Hello Joshua Ling! Happy 21st!! Wow amazing to see that you're thriving and doing well. I hope that you will settle in well and not stress out so much about studying abroad. YOU'RE GNA DO GREAT. thanks for all the memories, fun times and the good convos. Meet up when you're back and gym!! Stay strong in life and in your faith and MAY GOD BLESS YOU ALWAYS. have a great, blessed birthday and STAY SAFE!! -Raq",
+   "template": "box",
+   "photo_web": [
+    "assets/photos/raquel/1.jpg",
+    "assets/photos/raquel/2.jpg",
+    "assets/photos/raquel/3.jpg",
+    "assets/photos/raquel/4.jpg"
+   ],
+   "name_asset": "assets/names/raquel.png",
+   "n_photos": 4
+  },
+  {
+   "name": "raeanne",
+   "slug": "raeanne",
+   "message": "HEY LING!!! happy birthday and happy farewell to you 😢 just wanted to take this time to really appreciate and thank you for being such a goated pal to the three of us the past 2-3 years!!! even though we always joke about how we’re your three therapists, i hope you know i deeply appreciate and cherish you as a friend! thank you for always being so intentional in our friendship, to always check in on us and hype us up, i really admire your authenticity and intentionality in your friendships with people!! i am truly so happy for u, as you enter this new chapter of your life (adulthood and uni), and though we won’t see you for a while, we’re always rooting for you and here for you. have a blessed birthday ling!",
+   "template": "camera",
+   "photo_web": [
+    "assets/photos/raeanne/1.jpg"
+   ],
+   "name_asset": "assets/names/raeanne.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Shafiq",
+   "slug": "shafiq",
+   "message": "been nice knowing u ling </3 Dont slime out ur day 1s. Take care and dont do too many stupid things over there. Gonna miss u blo. Lova ya",
+   "template": "corkboard",
+   "photo_web": [
+    "assets/photos/shafiq/1.jpg",
+    "assets/photos/shafiq/2.jpg",
+    "assets/photos/shafiq/3.jpg",
+    "assets/photos/shafiq/4.jpg",
+    "assets/photos/shafiq/5.jpg",
+    "assets/photos/shafiq/6.jpg",
+    "assets/photos/shafiq/7.jpg",
+    "assets/photos/shafiq/8.jpg",
+    "assets/photos/shafiq/9.jpg",
+    "assets/photos/shafiq/10.jpg"
+   ],
+   "name_asset": "assets/names/shafiq.png",
+   "n_photos": 10
+  },
+  {
+   "name": "teh koh",
+   "slug": "teh-koh",
+   "message": "Hi Ling,\n\nI don’t think I’ve written a letter to you in our 8 years of friendship (how has it been 8 years..), so being sentimental and all, I feel like there’s quite a bit to say…\n\nFirst of all, I think out of all my friends, you’re probably the nicest guy, which is like such an umbrella term but I don’t know how else to put it. I wouldn’t know anyone else that would feel as bad winning a poker hand like you do, or more of considering everyone’s feelings first in general? I think it’s a really admirable trait of yours.\n\nAnyways, as with most people, I don’t really remember the first time we talked or when we actually became friends (provided it has been eight full years). But I do remember feeling pretty stoked that I had a friend living so close to me, and though we didn’t have much in common back then, I still remember our time in FN202 really fondly. Whether it be the humongous friend group we were in or playing like recess football everyday or like the beans incident and vivien sim segregating the class in two.. peak times. Oh and also, I remember this one moment at the end of sec 2 when u me trey and like shao decided to take lit for our subj combi and being q excited about being in the same class together LOL\n\nOther than old memories in sji, it’s actually been insane to see your development as a poker player. I remember the first few sessions when you won quite a few hands and realised that like on the lowkey you’ve got great instincts as someone new to the game. Okay but other than poker (I feel like we bring it up too much), it’s been really refreshing to see your growth as a person and who you are today. I think there was a really long period of time that we didn’t really see each other much: between the time of us playing valorant post Os and like playing basketball during our post jc days, with the occasional time we saw each other when you came back to sji… But at least for the past few years, the way that you are so committed to all your relationships and driven with your career goals yet being able to stay grounded at all times is really laudable, big ups man!\n\nOne last thing: since it’s more current – I will foooooonnnnndddddly remember the times we had lunch together this summer. It’s always a breath of fresh air to go out of the office and be able to eat goated caifan and to talk about nba and poker and non w*rk related stuff (peep the picture attached). And more of forward looking to the future, though I can’t promise I’ll be in the UK next sem (which I really hope happens like I don’t get a single internship and I can go to exchange in peace), plspls let’s stay in touch and keep streaksssssssssssss and come back often ya \n\nThanks for the past eight years ling, and cheers to many more ball/gym/poker seshs and LUNCH during summers (after all, I’ll probably be in the cbd with u for the next 40 years)\n\n(Nonchalant and niche sign off phrase)\nTeh Koh",
+   "template": "magnet",
+   "photo_web": [
+    "assets/photos/teh-koh/1.jpg",
+    "assets/photos/teh-koh/2.jpg",
+    "assets/photos/teh-koh/3.jpg",
+    "assets/photos/teh-koh/4.jpg"
+   ],
+   "name_asset": "assets/names/teh-koh.png",
+   "n_photos": 4
+  },
+  {
+   "name": "Sarah chan",
+   "slug": "sarah-chan",
+   "message": "HAPPY BIRTHDAY JOSH! Welcome to adulthood🤣 have a wonderful day and have a good time in london! You will be dearly missed. Make good friends, eat good food and most importantly take good care of yourself. I'm sure youll have a lot of fun there and even if you dont you can make it fun. Thanks for the many years of friendship and laughter. Will miss our church gatherings/breakfast. I'll see you when you come back every once in a while and i'll still be here waiting for all your crazy stories and drama cuz you are quite a drama queen. Cheers, Sarah.",
+   "template": "jeans",
+   "photo_web": [
+    "assets/photos/sarah-chan/1.jpg"
+   ],
+   "name_asset": "assets/names/sarah-chan.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Ash",
+   "slug": "ash",
+   "message": "Happy birthday ling. You know that you are one of my best friends and I’m gonna miss you when you leave. Asshole guy. Thanks for always being there for me and all my shit and know that I’ll always be there for yours also. Doing everything with you is so fun even talking about boring shit like stocks. Going to Europe and China with you is actually one of the best trips of my life and I’d never be able to forget these core memories. I can’t wait to travel next with you when we come see you in UK. You will always be my brodigy love you man",
+   "template": "box",
+   "photo_web": [
+    "assets/photos/ash/1.jpg",
+    "assets/photos/ash/2.jpg",
+    "assets/photos/ash/3.jpg",
+    "assets/photos/ash/4.jpg",
+    "assets/photos/ash/5.jpg",
+    "assets/photos/ash/6.jpg",
+    "assets/photos/ash/7.jpg",
+    "assets/photos/ash/8.jpg",
+    "assets/photos/ash/9.jpg",
+    "assets/photos/ash/10.jpg"
+   ],
+   "name_asset": "assets/names/ash.png",
+   "n_photos": 10
+  },
+  {
+   "name": "Yvette",
+   "slug": "yvette",
+   "message": "Happy 21st ling holy shit it’s kinda crazy that I’ve known u since we were like 9 or something and we used to hang out with anthony in cat class damn the good old times anyways I’m glad to have grown up with u and seen u throughout all da years through your up and downs and im happy that u are going to be in London now yay I hope u have a very fulfilling birthday and I’m excited for you to start your journey living overseas and hope you have the best 21st birthday broski see u soon and I hope u know u can always message me or talk to me if u ever need help with anything",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/yvette/1.jpg",
+    "assets/photos/yvette/2.jpg",
+    "assets/photos/yvette/3.jpg"
+   ],
+   "name_asset": "assets/names/yvette.png",
+   "n_photos": 3
+  },
+  {
+   "name": "charlotte",
+   "slug": "charlotte",
+   "message": "HIIII LING HAPPY BIRTHDAY tiktok streak buddy that i can NEVER EVER maintain it with lets try again when midtems are over 😐 but well actually miss you sm man as emo and performative as you are you are actually a solid friend & you bring the vibes in another way (ig) please never stop pestering everybody on text whether you are in singapore or overseas hope i can gen go there for exchange to see u and julaya HAPPY BIG 21 BIRTHDAY ONCE AGAIN 🎂",
+   "template": "corkboard",
+   "photo_web": [
+    "assets/photos/charlotte/1.jpg",
+    "assets/photos/charlotte/2.jpg",
+    "assets/photos/charlotte/3.jpg",
+    "assets/photos/charlotte/4.jpg",
+    "assets/photos/charlotte/5.jpg",
+    "assets/photos/charlotte/6.jpg",
+    "assets/photos/charlotte/7.jpg"
+   ],
+   "name_asset": "assets/names/charlotte.png",
+   "n_photos": 7
+  },
+  {
+   "name": "Dhiren",
+   "slug": "dhiren",
+   "message": "Ling, we might be fake friends because I only found 2 photos of “us”. One is a club photo and one is at poker, of you and my arms. The situation was so dire I had to take a pic of u when we went to eat at Star Vista…Nonetheless, I’m going to miss you like a real friend…this is not a “goodbye” but a “see you later” (your flight tickets will be paid by the rest of us, probably me…), so when I see you next I hope we are both jacked. Good luck in the UK, I know you’ll mog so your fun is inevitable, as well as the poker income…you’ll be living there for free. Don’t come back to quickly🤕",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/dhiren/1.jpg",
+    "assets/photos/dhiren/2.jpg",
+    "assets/photos/dhiren/3.jpg"
+   ],
+   "name_asset": "assets/names/dhiren.png",
+   "n_photos": 3
+  },
+  {
+   "name": "venus",
+   "slug": "venus",
+   "message": "happy birthday ling!!! hope you have a blessed birthday and i hope u meet good and nice friends overseas!",
+   "template": "camera",
+   "photo_web": [
+    "assets/photos/venus/1.jpg"
+   ],
+   "name_asset": "assets/names/venus.png",
+   "n_photos": 1
+  },
+  {
+   "name": "annette",
+   "slug": "annette",
+   "message": "i have no pictures w u ling other than a lot of group pics but yes i am very happy that viv brought u to hhn where i got to be friends w u as well before u leave for the UK Forever✌🏻even tho ure super autistic sometimes and also very weepy and also very sad i hope u have the best time there and i hope u and kayla last forever and i hope ur grades r good and i hope ur UOB pay lasts u there and i hope ure finally happy there esp when kayla visits u ✌🏻✌🏻✌🏻 YAY - Annette",
+   "template": "jeans",
+   "photo_web": [
+    "assets/photos/annette/1.jpg"
+   ],
+   "name_asset": "assets/names/annette.png",
+   "n_photos": 1
+  },
+  {
+   "name": "Howie",
+   "slug": "howie",
+   "message": "hi ling, \n\nin j1, if someone were to tell me i’d be close friends with joshua ling in 2026 i’d laugh at their face. that was my impression of u. i know i sound like an asshole but i included some screenshots for justification. (had to refrain from including the worst ones, i feel bad for kayla…) ur obsession w with ur broccoli hair and ur pick me ass demeanour really ticked me off man. \n\ni don’t know what it was but one day you just grew up and became a real person. i’m glad. \n\ni could lie and say ill miss the ball sessions most or i’ll miss the hangouts most. but lets be real, there has been nothing more meaningful between us than all the work sessions. you’re perhaps the only person it’s easy to look back at poker and smile with, and the stats say why… i guess history is written by the victors and damn was it fun.\n\nfor what it’s worth, i do think you’re the second best poker player among work. i’ll never admit this but i try extra hard when i’m heads up against you. even when you’re 11000 kilometres away - never forget that i have u by the balls man. thanks for giving me the satisfaction of winning pots against you ling. i cherish and ill miss it. it’s been a pleasure to share the table with you bro. \n\nfast forward to 2026, and now calling us “close” wouldn’t justify how i feel about our friendship. i’ve always treated the ones closest to me as my brothers and “brother” is a lot more adequate a word to describe what i think of u. and tbh, im really fucking sad my brother is leaving so soon. \n\nhappiest birthday ling, i truly wish u all the best in london. \n\nhowie",
+   "template": "magnet",
+   "photo_web": [
+    "assets/photos/howie/1.jpg",
+    "assets/photos/howie/2.jpg",
+    "assets/photos/howie/3.jpg",
+    "assets/photos/howie/4.jpg",
+    "assets/photos/howie/5.jpg"
+   ],
+   "name_asset": "assets/names/howie.png",
+   "n_photos": 5
+  },
+  {
+   "name": "Jake Yim",
+   "slug": "jake-yim",
+   "message": "Hi Ling, happy birthday first of all and i wish you the best.\nSecond is that holy shit you’re moving overseas, I know it’s scary but i know you’ll be fine. The first few weeks might be tough but always know that we all have your backs.\nEven though we dont talk as much even though we dont see each other we will always be there for you if and when you need us.\nYou’ve so got this love you ling\n\n-Jake Yim",
+   "template": "clothesline",
+   "photo_web": [
+    "assets/photos/jake-yim/1.jpg",
+    "assets/photos/jake-yim/2.jpg",
+    "assets/photos/jake-yim/3.jpg"
+   ],
+   "name_asset": "assets/names/jake-yim.png",
+   "n_photos": 3
+  },
+  {
+   "name": "Myn",
+   "slug": "myn",
+   "message": "Happy birthday Ling!!!! Can’t wait to meet up in London!!",
+   "template": "box",
+   "photo_web": [
+    "assets/photos/myn/1.jpg",
+    "assets/photos/myn/2.jpg",
+    "assets/photos/myn/3.jpg",
+    "assets/photos/myn/4.jpg"
+   ],
+   "name_asset": "assets/names/myn.png",
+   "n_photos": 4
+  }
+ ],
+ "family": [
+  {
+   "name": "matin",
+   "slug": "matin",
+   "message": "good luck in your studies and have fun",
+   "template": "fam-red",
+   "photo_web": [
+    "assets/photos/matin/1.jpg"
+   ],
+   "n_photos": 1
+  },
+  {
+   "name": "Rachel (sister)",
+   "slug": "rachel-sister",
+   "message": "Have a nice life. I hope we’ll see you again",
+   "template": "fam-plaid-warm",
+   "photo_web": [
+    "assets/photos/rachel-sister/1.jpg",
+    "assets/photos/rachel-sister/2.jpg",
+    "assets/photos/rachel-sister/3.jpg",
+    "assets/photos/rachel-sister/4.jpg",
+    "assets/photos/rachel-sister/5.jpg",
+    "assets/photos/rachel-sister/6.jpg"
+   ],
+   "n_photos": 6
+  },
+  {
+   "name": "emma uwu ling",
+   "slug": "emma-uwu-ling",
+   "message": "Hi gherp happy birthday fatty. 😈😈 now you’re 21 and your leaving and I’m sad but it’s okay cause i can chill in your room😬🤗 I will miss you a lot and I don’t say this much but I love you a lot okay don’t die in London 🥰🧙‍♀️🥹🤪😬😛💞❤️😐😛😆😜🧙‍♀️😡😬🥰😬🤫🧙‍♀️🥰👍🙏😝😬😡😜😝🤗🥰🤷‍♀️😏😆😏😬\n\nLove, your meimei",
+   "template": "fam-plaid-green",
+   "photo_web": [
+    "assets/photos/emma-uwu-ling/1.jpg",
+    "assets/photos/emma-uwu-ling/2.jpg"
+   ],
+   "n_photos": 2
+  },
+  {
+   "name": "Daddy Ling",
+   "slug": "daddy-ling",
+   "message": "Happy 21st Birthday Day Joshie! Blessed to have you as our son. You are now officially an adult, make good decisions and don’t do things I would not do. You know what they are! I hope…",
+   "template": "fam-plaid-olive",
+   "photo_web": [
+    "assets/photos/daddy-ling/1.jpg"
+   ],
+   "n_photos": 1
+  },
+  {
+   "name": "Mummud",
+   "slug": "mummud",
+   "message": "Sweetheart, you have been one of God’s greatest gifts to me. I am truly proud of all your achievements thus far and grateful for you just simply being you. Continue to believe in yourself and with God’s continued presence in your life, you will be blessed with good health, peace, prosperity and most of all, abundant love that you deserve. Love you to the moon and back. Have a blessed 21st bday and a spirit-filled time in London pursuing your goals! xx Mummud",
+   "template": "fam-pink",
+   "photo_web": [
+    "assets/photos/mummud/1.jpg",
+    "assets/photos/mummud/2.jpg",
+    "assets/photos/mummud/3.jpg",
+    "assets/photos/mummud/4.jpg",
+    "assets/photos/mummud/5.jpg",
+    "assets/photos/mummud/6.jpg",
+    "assets/photos/mummud/7.jpg",
+    "assets/photos/mummud/8.jpg"
+   ],
+   "n_photos": 8
+  },
+  {
+   "name": "kay <3",
+   "slug": "kay-3",
+   "message": "to my dearest,\n\ni don’t even know where to begin. i have so much to say yet no words can encapsulate what i feel for u. you’re one of the best things that have ever happened to me, and probably will be for the rest of my life. i can’t imagine what my life would be like without you. even though we are going to be faced with many uncertainties soon and it is scary and certainly won’t be easy, i wholeheartedly believe in us pulling through - as the saying goes, love is a verb. i choose u and i will continue choosing to love u and showing u i do. being worried about our ldr just shows how much this means to us, im more excited for u now, studying abroad in a different culture and environment. u being u i know u are gonna do just fineeee and make lotsss of friends no doubt. dont replace me!!! \n\ni love spending time with you, whether it be going on fun dates and spamming photo booths and vinyl stores, or chudding out just eating and napping right after.. u make me feel warm and fuzzy and irritated and sad and buzzing with happiness and sleepy; u make me feel alive :p\n\nthank you for always loving me and showing that u do, for being patient with me, for always trying to understand me, and for loving me with my flaws not despite.\n\ni can’t wait to see u flourish in this new chapter of life!!! how exciting!!! i can’t wait to visit u in london and role play a travelling couple Lol \n\ni can’t wait to do life with ya, wouldn’t do it with anyone else. i love youuuuu more than most poopy, happiest 21st birthday my darling baby. muah!",
+   "template": "photostrip",
+   "photo_web": [
+    "assets/photos/kay-3/1.jpg",
+    "assets/photos/kay-3/2.jpg",
+    "assets/photos/kay-3/3.jpg",
+    "assets/photos/kay-3/4.jpg",
+    "assets/photos/kay-3/5.jpg",
+    "assets/photos/kay-3/6.jpg",
+    "assets/photos/kay-3/7.jpg",
+    "assets/photos/kay-3/8.jpg",
+    "assets/photos/kay-3/9.jpg",
+    "assets/photos/kay-3/10.jpg"
+   ],
+   "n_photos": 10
+  }
+ ]
+};

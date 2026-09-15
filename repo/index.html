@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy 21st, Ling!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage"></div>
+  </div>
+
+  <!-- Photo lightbox -->
+  <div id="lightbox" class="hidden">
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- Letter popup -->
+  <div id="letter-overlay" class="hidden">
+    <div id="letter-card">
+      <div id="letter-cover" class="letter-face">
+        <img id="letter-cover-img" src="" alt="" />
+        <div id="letter-hint">tap to open</div>
+      </div>
+      <div id="letter-inside" class="letter-face">
+        <div id="letter-message"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.json.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
